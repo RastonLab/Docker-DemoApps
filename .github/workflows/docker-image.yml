@@ -16,6 +16,8 @@ jobs:
     - name: set image name to lower case
       run: |
         echo "DOCKER_IMAGE_NAME=${DOCKER_IMAGE_NAME,,}" >>${GITHUB_ENV}
+    - name: setup docker buildx
+      run: docker buildx create --use
     - uses: actions/checkout@v3
     - name: Log in to the Container registry
       uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
