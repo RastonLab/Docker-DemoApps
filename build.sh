@@ -25,6 +25,9 @@ function build_apps() {
 		cat $template | envsubst >"index.html"
 		# set -x
 		docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME:app$appNum$suffix" --push .
+		if [[ $appNum == 1 ]]; then
+			docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME" --push .
+		fi
 		# set +x
 	done
 	rm index.html
