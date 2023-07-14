@@ -25,8 +25,8 @@ function build_apps() {
 		cat $template | envsubst >"index.html"
 		# set -x
 		docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME:app$appNum$suffix" --push .
-		if [[ $appNum -eq 1 && -z $alt ]]; then
-			docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME:1.0.0" --push .
+		if [[ $appNum -eq 2 && -z $alt ]]; then
+			docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME:1.0.1" --push .
 		fi
 		# set +x
 	done
