@@ -1,7 +1,7 @@
 # Docker DemoApps
  Build files to create demo web apps
  
-[![Docker Image CI](https://github.com/RastonLab/Docker-DemoApps/actions/workflows/docker-image.yml/badge.svg)](https://github.com/RastonLab/Docker-DemoApps/actions/workflows/docker-image.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/RastonLab/Docker-DemoApps/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/RastonLab/Docker-DemoApps/tree/main)
 
 ## Usage
 ```
