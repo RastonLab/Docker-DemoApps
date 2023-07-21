@@ -37,7 +37,7 @@ function build_single_app() {
 		read -p "Enter the version: " VERSION
 	fi
 	alt="version $VERSION"
-	color=purple
+	color=red
 	export alt color
 	cat $template | envsubst >"index.html"
 	docker buildx build --platform linux/arm64,linux/amd64 -t "$DOCKER_IMAGE_NAME:$VERSION" --push .
